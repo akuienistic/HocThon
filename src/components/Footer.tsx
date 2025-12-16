@@ -21,6 +21,20 @@ export const Footer = () => {
             Back to Top ↑
           </button>
         </div>
+        {/* Designer Credit */}
+        <div className="mt-4 text-center">
+          <p className="font-body text-xs text-cream/40">
+            Designed and Built by{" "}
+            <a
+              href="https://www.linkedin.com/in/simon-akuien-atem-710895290"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:text-gold/80 transition-colors"
+            >
+              Simon Akuien
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

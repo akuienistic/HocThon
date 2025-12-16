@@ -4,9 +4,7 @@ export const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Label */}
-          <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4 text-center">
-            About Me
-          </p>
+          <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4 text-center">About Me</p>
 
           {/* Section Title */}
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-forest text-center mb-12">
@@ -14,6 +12,7 @@ export const AboutSection = () => {
             <br />
             <span className="text-gold">Expertise</span>
           </h2>
+          <img src="/Laat.webp" alt="Laat" className="mx-auto mb-8 max-w-md w-full rounded-lg shadow-lg animate-fade-in opacity-0" style={{ animationDelay: "300ms", animationFillMode: "forwards" }} />
 
           {/* Content */}
           <div className="relative">
@@ -22,15 +21,20 @@ export const AboutSection = () => {
 
             <div className="md:pl-12">
               <p className="font-body text-lg md:text-xl text-forest/80 leading-relaxed mb-8">
-                I am an <strong className="text-forest font-semibold">outspoken advocate</strong> and Ph.D. candidate in Wildlife Tourism Management, driven by a mission to create sustainable futures.
+                I am an <strong className="text-forest font-semibold">outspoken advocate</strong> and Ph.D. candidate in
+                Wildlife Tourism Management, driven by a mission to create sustainable futures.
               </p>
 
               <p className="font-body text-lg md:text-xl text-forest/80 leading-relaxed mb-8">
-                My work sits at the unique intersection of <span className="text-gold font-semibold">environmental conservation</span>, human migration law, and strategic advocacy, informed by a global education and rooted in the context of South Sudan and the wider East African region.
+                My work sits at the unique intersection of{" "}
+                <span className="text-gold font-semibold">environmental conservation</span>, human migration law, and
+                strategic advocacy, informed by a global education and rooted in the context of South Sudan and the
+                wider East African region.
               </p>
 
               <p className="font-body text-lg md:text-xl text-forest/80 leading-relaxed">
-                With a community of over <span className="font-semibold text-forest">80,000 followers</span>, I leverage persuasive communication to turn research into actionable impact.
+                With a community of over <span className="font-semibold text-forest">80,000 followers</span>, I leverage
+                persuasive communication to turn research into actionable impact.
               </p>
             </div>
           </div>
@@ -44,12 +48,8 @@ export const AboutSection = () => {
               { value: "10+", label: "Years in Advocacy" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="font-heading text-3xl md:text-4xl font-bold text-gold mb-2">
-                  {stat.value}
-                </p>
-                <p className="font-body text-sm text-forest/60 uppercase tracking-wider">
-                  {stat.label}
-                </p>
+                <p className="font-heading text-3xl md:text-4xl font-bold text-gold mb-2">{stat.value}</p>
+                <p className="font-body text-sm text-forest/60 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
