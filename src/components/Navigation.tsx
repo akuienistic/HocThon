@@ -94,17 +94,17 @@ export const Navigation = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full right-0 w-1/2 bg-forest/95 backdrop-blur-md border-l border-cream/10 shadow-2xl transition-all duration-300 overflow-hidden rounded-bl-lg ${
+        className={`md:hidden absolute top-full right-0 w-1/2 bg-cream/10 backdrop-blur-sm border border-cream/20 transition-all duration-300 overflow-hidden rounded-lg ${
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 py-8 flex flex-col gap-6">
+        <div className="px-6 py-8 flex flex-col gap-1">
           {navLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="flex items-center gap-4 text-cream/80 hover:text-cream hover:bg-cream/10 font-body text-lg transition-all duration-200 py-3 px-4 rounded-lg group"
+              className="flex items-center gap-4 text-white/90 font-body text-lg transition-all duration-200 py-3 px-4 rounded-lg group"
             >
               <link.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               {link.label}

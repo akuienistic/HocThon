@@ -99,7 +99,7 @@ export const Footer = () => {
               HocThon<span className="text-gold">.</span>
             </a>
             <p className="font-body text-sm text-cream/60 text-left lg:text-right">
-             |Wildlife Tourism Expert | PhD. Candidate in Wildlife Tourism | Speaker on Politics, Economy etc |
+             | Wildlife Tourism Expert | PhD. Candidate in Wildlife Tourism | Speaker on Politics, Economy etc |
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gold hover:text-gold/80 transition-colors"
               >
-                Simon Akuien
+                Simon Akuien Atem
               </a>
             </p>
           </div>
