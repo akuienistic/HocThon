@@ -45,13 +45,15 @@ export const CredentialsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">
-            Academic Journey
-          </p>
+          <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">Academic Journey</p>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-forest">
             Global
             <span className="text-gold"> Education</span>
           </h2>
+          <p className="mt-5">
+            Laat Maker is very learnt man. He has studied in various world class universities both in and out Africa.
+            <br /> Glance at some of his majors and the institutions attended.
+          </p>
         </div>
 
         {/* Timeline */}
@@ -64,9 +66,7 @@ export const CredentialsSection = () => {
             {credentials.map((credential, index) => (
               <div
                 key={index}
-                className={`relative flex items-start gap-6 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                className={`relative flex items-start gap-6 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-gold transform -translate-x-1/2 z-10 shadow-gold">
@@ -104,9 +104,7 @@ export const CredentialsSection = () => {
                     {/* Institution */}
                     <div className={`flex items-center gap-2 mt-3 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                       <Building2 className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                      <p className="font-body text-sm text-muted-foreground">
-                        {credential.institution}
-                      </p>
+                      <p className="font-body text-sm text-muted-foreground">{credential.institution}</p>
                     </div>
                   </div>
                 </div>

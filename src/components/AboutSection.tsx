@@ -21,19 +21,19 @@ export const AboutSection = () => {
 
             <div className="md:pl-12">
               <p className="font-body text-lg md:text-xl text-forest/80 leading-relaxed mb-8">
-                I am an <strong className="text-forest font-semibold">outspoken advocate</strong> and Ph.D. candidate in
+                <span className="text-gold font-semibold">HocThon Laat Maker Riak</span> is an <strong className="text-forest font-semibold">outspoken advocate</strong> and the FIRST Ph.D. candidate the country has ever had in
                 Wildlife Tourism Management, driven by a mission to create sustainable futures.
               </p>
 
               <p className="font-body text-lg md:text-xl text-forest/80 leading-relaxed mb-8">
-                My work sits at the unique intersection of{" "}
+                His work sits at the unique intersection of{" "}
                 <span className="text-gold font-semibold">environmental conservation</span>, human migration law, and
                 strategic advocacy, informed by a global education and rooted in the context of South Sudan and the
                 wider East African region.
               </p>
 
               <p className="font-body text-lg md:text-xl text-forest/80 leading-relaxed">
-                With a community of over <span className="font-semibold text-forest">80,000 followers</span>, I leverage
+                With a community of over <span className="font-semibold text-forest">100,000 followers on Facebook</span>, he leverages
                 persuasive communication to turn research into actionable impact.
               </p>
             </div>
@@ -42,10 +42,10 @@ export const AboutSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-forest/10">
             {[
-              { value: "80K+", label: "Followers" },
+              { value: "100K+", label: "Followers" },
               { value: "6+", label: "Degrees & Certifications" },
               { value: "4", label: "Countries Studied" },
-              { value: "10+", label: "Years in Advocacy" },
+              { value: "5+", label: "Years in Advocacy" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="font-heading text-3xl md:text-4xl font-bold text-gold mb-2">{stat.value}</p>

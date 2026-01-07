@@ -20,9 +20,7 @@ export const BackgroundSection = () => {
               {/* Location Badge */}
               <div className="absolute bottom-6 left-6 flex items-center gap-2 bg-cream/10 backdrop-blur-md border border-cream/20 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-gold" />
-                <span className="font-body text-sm text-cream">
-                  Akot, Bahr Al Ghazal
-                </span>
+                <span className="font-body text-sm text-cream">Akot, Bahr Al Ghazal</span>
               </div>
             </div>
 
@@ -32,9 +30,7 @@ export const BackgroundSection = () => {
 
           {/* Content Side */}
           <div className="order-1 lg:order-2">
-            <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">
-              My Origins
-            </p>
+            <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">Laat's Origins</p>
 
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-cream mb-8">
               Roots &<br />
@@ -43,25 +39,23 @@ export const BackgroundSection = () => {
 
             <div className="space-y-6">
               <p className="font-body text-lg text-cream/80 leading-relaxed">
-                Originally from and based in <strong className="text-cream">Akot, Bahr Al Ghazal, South Sudan</strong>, my work is intrinsically linked to the development and resilience of my community and region.
+                Originally from <strong className="text-cream">Akot, Bahr Al Ghazal, South Sudan</strong>, his work is
+                intrinsically linked to the development and resilience of his community and region.
               </p>
 
               <p className="font-body text-lg text-cream/80 leading-relaxed">
-                This ground-level perspective informs all my academic and advocacy pursuits on the global stage, ensuring that my research remains anchored in real-world challenges and opportunities.
+                This ground-level perspective informs all his academic and advocacy pursuits on the global stage,
+                ensuring that his research remains anchored in real-world challenges and opportunities.
               </p>
 
               <div className="pt-6 border-t border-cream/10">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
-                    <span className="font-heading text-xl text-gold">🇸🇸</span>
+                    <span className="font-heading text-xl text-gold">SSD</span>
                   </div>
                   <div>
-                    <p className="font-body text-sm text-cream/60 uppercase tracking-wider">
-                      Based In
-                    </p>
-                    <p className="font-heading text-lg text-cream font-medium">
-                      South Sudan, East Africa
-                    </p>
+                    <p className="font-body text-sm text-cream/60 uppercase tracking-wider">Based In</p>
+                    <p className="font-heading text-lg text-cream font-medium">South Sudan, East Africa</p>
                   </div>
                 </div>
               </div>

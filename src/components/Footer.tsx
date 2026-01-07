@@ -8,22 +8,8 @@ export const Footer = () => {
             © 2026 HocThon Laat Maker Riak. All rights reserved.
           </p>
 
-          {/* Logo */}
-          <a href="#hero" className="font-heading text-xl font-bold text-cream">
-            HocThon<span className="text-gold">.</span>
-          </a>
-
-          {/* Back to Top */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-body text-sm text-cream/60 hover:text-cream transition-colors"
-          >
-            Back to Top ↑
-          </button>
-        </div>
-        {/* Designer Credit */}
-        <div className="mt-4 text-center">
-          <p className="font-body text-xs text-cream/40">
+          {/* Designer Credit */}
+          <p className="font-body text-sm text-cream/60 text-center">
             Designed and Built by{" "}
             <a
               href="https://www.linkedin.com/in/simon-akuien-atem-710895290"
@@ -34,6 +20,11 @@ export const Footer = () => {
               Simon Akuien
             </a>
           </p>
+
+          {/* Logo */}
+          <a href="#hero" className="font-heading text-xl font-bold text-cream">
+            HocThon<span className="text-gold">.</span>
+          </a>
         </div>
       </div>
     </footer>

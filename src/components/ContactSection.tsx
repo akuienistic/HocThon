@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   Mail,
-  Download,
+  BookOpen,
   Facebook,
   Twitter,
   Linkedin,
@@ -58,13 +58,13 @@ export const ContactSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">Let's Connect</p>
+          <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">Connect with him</p>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-forest mb-6">
             Collaborate &<span className="text-gold"> Connect</span>
           </h2>
           <p className="font-body text-lg text-forest/70 max-w-2xl mx-auto">
-            I am open to speaking engagements, academic collaboration, consulting projects, and media inquiries related
-            to wildlife tourism, migration, and advocacy.
+            Laat is open to speaking engagements, academic collaboration, consulting projects, and media inquiries
+            related to wildlife tourism, migration, and advocacy.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export const ContactSection = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-background border border-input rounded-lg font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
-                  placeholder="Tell me about your project or inquiry..."
+                  placeholder="Elucidate your concern or inquiry here..."
                 />
               </div>
 
@@ -159,30 +159,30 @@ export const ContactSection = () => {
                   <Mail className="w-6 h-6 text-gold" />
                 </div>
                 <div>
-                  <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-1">Email Me</p>
+                  <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-1">Send an Email</p>
                   <a
                     href="mailto:contact@hocthonriak.com"
                     className="font-heading text-lg text-forest hover:text-gold transition-colors"
                   >
-                    contact@hocthonriak.com
+                    hocthonriak@gmail.com
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* CV Download */}
+            {/* Research Publications */}
             <div className="group">
               <a
                 href="#"
                 className="flex items-center gap-4 p-6 bg-forest/5 rounded-xl transition-colors hover:bg-forest/10"
               >
                 <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                  <Download className="w-6 h-6 text-gold" />
+                  <BookOpen className="w-6 h-6 text-gold" />
                 </div>
                 <div>
                   <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-1">Academic Profile</p>
                   <span className="font-heading text-lg text-forest group-hover:text-gold transition-colors">
-                    Download My Academic CV
+                    View My Research Publications
                   </span>
                 </div>
               </a>
@@ -190,10 +190,12 @@ export const ContactSection = () => {
 
             {/* Social Links */}
             <div className="pt-6 border-t border-forest/10">
-              <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-4">Follow My Work</p>
+              <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-4">
+                Follow Laat on His social Media Handles.
+              </p>
               <div className="flex gap-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://web.facebook.com/hocthon.laat.maker.riak.2025"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-forest flex items-center justify-center text-cream hover:bg-forest-light transition-colors"

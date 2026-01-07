@@ -13,6 +13,10 @@ export const HeroSection = () => {
     if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToBottom = () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -63,16 +67,21 @@ export const HeroSection = () => {
           >
             <Button variant="hero" onClick={scrollToWork}>
               <Briefcase className="w-4 h-4" />
-              View My Work
+              View His Work
             </Button>
             <Button variant="heroOutline" onClick={scrollToContact}>
               <MessageCircle className="w-4 h-4" />
-              Contact Me
+              Contact Him
             </Button>
           </div>
 
-          {/* Arrow pointing to badge */}
-          <ArrowDown className="mx-auto mt-10 text-cream/50 animate-bounce" size={28} />
+          {/* Arrow pointing to bottom */}
+          <button
+            onClick={scrollToBottom}
+            className="mx-auto mt-10 text-cream/50 animate-bounce cursor-pointer bg-transparent border-none"
+          >
+            <ArrowDown size={28} />
+          </button>
 
           {/* Follower Badge */}
           <div
@@ -80,7 +89,42 @@ export const HeroSection = () => {
             style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
           >
             <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-            <span className="text-cream/90 font-body text-sm">80K+ Followers • Outspoken TruthTeller</span>
+            <span className="text-cream/90 font-body text-sm">
+              100K+ Followers on Facebook • Commentator on Politics • First PhD in Tourism in South Sudan
+            </span>
+          </div>
+
+          {/* Video Caption */}
+          <p
+            className="text-gold font-body text-sm md:text-base tracking-[0.3em] uppercase mt-8 mb-4 animate-fade-up opacity-0"
+            style={{ animationDelay: "1200ms", animationFillMode: "forwards" }}
+          >
+            Featured Video
+          </p>
+          <p className="text-cream/90 mb-8 text-lg leading-relaxed">
+            Featured below, is a video of Laat Maker during his PhD Proposal Presentation titled, "Determinance of
+            Community based Tourism Practices & its Effects on sustainable Tourism Performace of National Parks in South
+            Sudan".
+          </p>
+
+          {/* Facebook Video */}
+          <div className="mx-auto max-w-md mb-10 bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-lg overflow-hidden shadow-lg flex justify-center">
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?height=677&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1408736634095648%2F&show_text=false&width=400&t=0"
+              width="400"
+              height="677"
+              style={{
+                border: "none",
+                overflow: "hidden",
+                borderRadius: "2rem",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                padding: "10px",
+              }}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
           </div>
         </div>
       </div>

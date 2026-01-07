@@ -28,7 +28,7 @@ export const ExpertiseSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">
-            What I Do
+            What He Does
           </p>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cream">
             Interdisciplinary
