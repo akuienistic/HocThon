@@ -193,7 +193,7 @@ export const ContactSection = () => {
               <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-4">
                 Follow Laat on His social Media Handles.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-start">
                 <a
                   href="https://web.facebook.com/hocthon.laat.maker.riak.2025"
                   target="_blank"
@@ -211,15 +211,6 @@ export const ContactSection = () => {
                   aria-label="Twitter"
                 >
                   <Twitter className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-forest flex items-center justify-center text-cream hover:bg-forest-light transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href="https://instagram.com"

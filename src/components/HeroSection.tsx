@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUp, Briefcase, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/HocThon Laat Maker Riak.jpg";
 
 export const HeroSection = () => {
   const scrollToWork = () => {
@@ -21,9 +21,9 @@ export const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Professional academic setting" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-hero opacity-85" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/50 via-transparent to-transparent" />
+        <img src={heroBg} alt="Professional academic setting" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/60 via-transparent to-transparent" />
       </div>
 
       {/* Decorative Elements */}
@@ -78,7 +78,7 @@ export const HeroSection = () => {
           {/* Arrow pointing to bottom */}
           <button
             onClick={scrollToBottom}
-            className="mx-auto mt-10 text-cream/50 animate-bounce cursor-pointer bg-transparent border-none"
+            className="flex mx-auto mt-10 text-cream/50 animate-bounce cursor-pointer bg-transparent border-none"
           >
             <ArrowDown size={28} />
           </button>
@@ -86,9 +86,9 @@ export const HeroSection = () => {
           {/* Follower Badge */}
           <div
             className="mt-10 mb-12 inline-flex items-center gap-3 bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-full px-6 py-3 animate-fade-up opacity-0"
-            style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
+            style={{ animationDelay: "100ms", animationFillMode: "forwards" }}
           >
-            <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+            <div className="w-6 h-3 bg-gold rounded-full animate-pulse" />
             <span className="text-cream/90 font-body text-sm">
               100K+ Followers on Facebook • Commentator on Politics • First PhD in Tourism in South Sudan
             </span>
