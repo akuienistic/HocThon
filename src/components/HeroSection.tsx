@@ -41,6 +41,7 @@ export const HeroSection = () => {
             HocThon Laat
             <br />
             <span className="text-gold">Maker Riak</span>
+            <br />
           </h1>
 
           {/* Subtitle */}

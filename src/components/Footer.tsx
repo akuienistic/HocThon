@@ -96,10 +96,11 @@ export const Footer = () => {
               onClick={(e) => handleNavClick(e, "#hero")}
               className="font-heading text-xl font-bold text-cream mb-4"
             >
-              HocThon<span className="text-gold">.</span>
+              <div>HocThon<span className="text-gold">.</span></div>
+              <div className="text-sm font-normal text-cream/70">Acik bé leuyic</div>
             </a>
             <p className="font-body text-sm text-cream/60 text-left lg:text-right">
-             | Wildlife Tourism Expert | PhD. Candidate in Wildlife Tourism | Speaker on Politics, Economy etc |
+              | Wildlife Tourism Expert | PhD. Candidate in Wildlife Tourism | Speaker on Politics, Economy etc |
             </p>
           </div>
         </div>
