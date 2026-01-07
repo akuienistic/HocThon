@@ -8,12 +8,6 @@ const pillars = [
       "Researching sustainable models that protect ecosystems and support local livelihoods.",
   },
   {
-    icon: Scale,
-    title: "Migration Law & Policy",
-    description:
-      "Applying postgraduate legal expertise to human migration challenges linked to environmental and economic factors.",
-  },
-  {
     icon: Megaphone,
     title: "Strategic Advocacy & Communication",
     description:
@@ -38,7 +32,7 @@ export const ExpertiseSection = () => {
         </div>
 
         {/* Pillars Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {pillars.map((pillar, index) => (
             <div
               key={index}

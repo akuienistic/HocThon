@@ -36,21 +36,38 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://formspree.io/f/xykzrwaj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: "Message Sent!",
-      description: (
-        <div className="flex items-start gap-2">
-          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
-          Thank you for reaching out. I'll get back to you soon.
-        </div>
-      ),
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: (
+            <div className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+              Thank you for reaching out. I'll get back to you soon.
+            </div>
+          ),
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -161,10 +178,10 @@ export const ContactSection = () => {
                 <div>
                   <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-1">Send an Email</p>
                   <a
-                    href="mailto:contact@hocthonriak.com"
+                    href="mailto:abrahamlaat717@gmail.com"
                     className="font-heading text-lg text-forest hover:text-gold transition-colors"
                   >
-                    hocthonriak@gmail.com
+                    abrahamlaat717@gmail.com
                   </a>
                 </div>
               </div>
