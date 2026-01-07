@@ -60,7 +60,7 @@ export const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-heading text-lg font-semibold text-cream mb-4">Follow Me</h3>
+            <h3 className="font-heading text-lg font-semibold text-cream mb-4">Connect with Laat</h3>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -79,7 +79,7 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-heading text-lg font-semibold text-cream mb-4">Contact</h3>
+            <h3 className="font-heading text-lg font-semibold text-cream mb-4">Contact Laat</h3>
             <a
               href="mailto:abrahamlaat717@gmail.com"
               className="flex items-center gap-2 font-body text-sm text-cream/60 hover:text-gold transition-colors"

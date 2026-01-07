@@ -199,7 +199,7 @@ export const ContactSection = () => {
                 <div>
                   <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-1">Academic Profile</p>
                   <span className="font-heading text-lg text-forest group-hover:text-gold transition-colors">
-                    View My Research Publications
+                    View His Research Publications
                   </span>
                 </div>
               </a>
