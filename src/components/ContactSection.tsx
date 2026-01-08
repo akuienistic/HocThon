@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -32,20 +33,81 @@ export const ContactSection = () => {
     }));
   };
 
+  // Sanitize input to prevent XSS
+  const sanitizeInput = (input: string): string => {
+    return input
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#x27;")
+      .replace(/\//g, "&#x2F;");
+  };
+
+  // Validate email format
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch("https://getform.io/f/apjxzdoa", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    // Client-side validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "Validation Error",
+        description: "Please fill in all fields.",
+        variant: "destructive",
       });
+      setIsSubmitting(false);
+      return;
+    }
 
-      if (response.ok) {
+    if (!isValidEmail(formData.email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Limit message length to prevent abuse
+    if (formData.message.length > 5000) {
+      toast({
+        title: "Message Too Long",
+        description: "Please limit your message to 5000 characters.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Prepare sanitized template parameters
+      const templateParams = {
+        from_name: sanitizeInput(formData.name),
+        from_email: sanitizeInput(formData.email),
+        message: sanitizeInput(formData.message),
+        to_name: "HocThon Laat Maker Riak",
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          limitRate: {
+            throttle: 5000, // Limit requests to 1 per 5 seconds
+          },
+        }
+      );
+
+      if (response.status === 200) {
         toast({
           title: "Message Sent!",
           description: (
@@ -60,9 +122,10 @@ export const ContactSection = () => {
         throw new Error("Failed to send message");
       }
     } catch (error) {
+      console.error("Email send error:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: "Failed to send message. Please try again or email directly.",
         variant: "destructive",
       });
     } finally {
