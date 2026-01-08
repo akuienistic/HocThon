@@ -38,7 +38,7 @@ export const HeroSection = () => {
             className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 leading-tight animate-fade-up opacity-0"
             style={{ animationDelay: "200ms", animationFillMode: "forwards" }}
           >
-            HocThon Laat
+            Abraham Laat
             <br />
             <span className="text-gold">Maker Riak</span>
             <br />

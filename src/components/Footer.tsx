@@ -97,7 +97,6 @@ export const Footer = () => {
               className="font-heading text-xl font-bold text-cream mb-4"
             >
               <div>HocThon<span className="text-gold">.</span></div>
-              <div className="text-sm font-normal text-cream/70">Acik bé leuyic</div>
             </a>
             <p className="font-body text-sm text-cream/60 text-left lg:text-right">
               | Wildlife Tourism Expert | PhD. Candidate in Wildlife Tourism | Speaker on Politics, Economy etc |
@@ -115,14 +114,14 @@ export const Footer = () => {
 
             {/* Designer Credit */}
             <p className="font-body text-sm text-cream/60 text-center">
-              Designed and Built by{" "}
+              Project handled by{" "}
               <a
                 href="https://www.linkedin.com/in/simon-akuien-atem-710895290"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gold hover:text-gold/80 transition-colors"
               >
-                Simon Akuien Atem
+                SIMON STAR TECH
               </a>
             </p>
           </div>

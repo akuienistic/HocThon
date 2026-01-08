@@ -49,7 +49,6 @@ export const Navigation = () => {
           }`}
         >
           <div>HocThon<span className="text-accent">.</span></div>
-          <div className={`text-sm font-light ${isScrolled ? "text-forest/70" : "text-cream/70"}`}>Acik bé leuyic</div>
         </a>
 
         {/* Desktop Navigation */}
