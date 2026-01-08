@@ -66,7 +66,7 @@ export const Loader = ({ onComplete }: { onComplete: () => void }) => {
 
           {/* Inner Initial */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-heading text-2xl font-bold text-gold animate-pulse">L</span>
+            <span className="font-heading text-2xl font-bold text-gold animate-pulse">Abraham</span>
           </div>
         </div>
 
