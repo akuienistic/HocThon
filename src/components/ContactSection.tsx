@@ -187,24 +187,6 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Research Publications */}
-            <div className="group">
-              <a
-                href="#"
-                className="flex items-center gap-4 p-6 bg-forest/5 rounded-xl transition-colors hover:bg-forest/10"
-              >
-                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                  <BookOpen className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-1">Academic Profile</p>
-                  <span className="font-heading text-lg text-forest group-hover:text-gold transition-colors">
-                    View His Research Publications
-                  </span>
-                </div>
-              </a>
-            </div>
-
             {/* Social Links */}
             <div className="pt-6 border-t border-forest/10">
               <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-4">

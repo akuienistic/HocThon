@@ -41,8 +41,43 @@ const credentials = [
 
 export const CredentialsSection = () => {
   return (
-    <section id="credentials" className="py-24 md:py-32 bg-cream">
-      <div className="container mx-auto px-6">
+    <section id="credentials" className="py-24 md:py-32 bg-cream relative overflow-hidden">
+      {/* Radiating Colors Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Center Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-gold/20 via-forest/10 to-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        {/* Radiating Rings */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-gold/10 rounded-full animate-ping"
+          style={{ animationDuration: "3s" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-forest/10 rounded-full animate-ping"
+          style={{ animationDuration: "4s" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] border border-blue-500/10 rounded-full animate-ping"
+          style={{ animationDuration: "5s" }}
+        />
+        {/* Orbiting Dots */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] animate-spin"
+          style={{ animationDuration: "20s" }}
+        >
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-gold rounded-full blur-sm" />
+        </div>
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] animate-spin"
+          style={{ animationDuration: "15s", animationDirection: "reverse" }}
+        >
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-forest rounded-full blur-sm" />
+        </div>
+        {/* Corner Accents */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-gold/10 to-transparent rounded-full blur-xl" />
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-xl" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">Academic Journey</p>
@@ -82,7 +117,7 @@ export const CredentialsSection = () => {
                   }`}
                 >
                   <div
-                    className={`bg-card border border-border rounded-xl p-6 shadow-soft transition-all duration-300 hover:shadow-elevated hover:-translate-y-1 ${
+                    className={`bg-white/80 backdrop-blur-sm border border-border rounded-xl p-6 shadow-soft transition-all duration-300 hover:shadow-elevated hover:-translate-y-1 ${
                       credential.highlight ? "border-gold/50" : ""
                     }`}
                   >

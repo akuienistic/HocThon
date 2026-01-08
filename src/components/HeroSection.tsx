@@ -113,7 +113,7 @@ export const HeroSection = () => {
             <div className="relative w-full pb-[56.25%] bg-black">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/awOzEdRq_9M?modestbranding=1&rel=0&iv_load_policy=3&controls=1&enablejsapi=1"
+                src="https://www.youtube.com/embed/RJ0B-vK3kB8?modestbranding=1&rel=0&iv_load_policy=3&controls=1&enablejsapi=1"
                 title="Featured Presentation"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

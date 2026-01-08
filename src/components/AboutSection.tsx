@@ -1,3 +1,63 @@
+import { useEffect, useRef, useState } from "react";
+import { Users, GraduationCap, Globe, Award } from "lucide-react";
+
+// Hook to animate numbers when in view
+const useCountUp = (endValue: number, duration: number = 2000, suffix: string = "") => {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            let startTimestamp: number | null = null;
+            const step = (timestamp: number) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+              const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+              setCount(Math.floor(easeOutQuart * endValue));
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                setCount(endValue);
+              }
+            };
+            window.requestAnimationFrame(step);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [endValue, duration, hasAnimated]);
+
+  return { count, ref };
+};
+
+// Animated stat component
+const StatItem = ({ value, label, suffix = "", icon: Icon, bgColor, iconColor }: { value: number; label: string; suffix?: string; icon: React.ElementType; bgColor: string; iconColor: string }) => {
+  const { count, ref } = useCountUp(value, 2000, suffix);
+  return (
+    <div ref={ref} className={`${bgColor} rounded-xl p-6 text-center transition-transform hover:scale-105`}>
+      <div className={`w-12 h-12 ${iconColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
+        <Icon className="w-6 h-6" />
+      </div>
+      <p className="font-heading text-3xl md:text-4xl font-bold text-forest mb-1">
+        {count}{suffix}
+      </p>
+      <p className="font-body text-xs text-forest/70 uppercase tracking-wider">{label}</p>
+    </div>
+  );
+};
+
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 md:py-32 bg-cream">
@@ -12,7 +72,7 @@ export const AboutSection = () => {
             <br />
             <span className="text-gold">Expertise</span>
           </h2>
-          <img src="/Laat.webp" alt="Laat" className="mx-auto mb-8 max-w-md w-full rounded-lg shadow-lg animate-fade-in opacity-0" style={{ animationDelay: "300ms", animationFillMode: "forwards" }} />
+          <img src="/Laat.webp" alt="Laat" className="mx-auto mb-8 max-w-md w-full rounded-xl shadow-lg animate-fade-in opacity-0" style={{ animationDelay: "300ms", animationFillMode: "forwards" }} />
 
           {/* Content */}
           <div className="relative">
@@ -40,18 +100,11 @@ export const AboutSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-forest/10">
-            {[
-              { value: "100K+", label: "Followers" },
-              { value: "6+", label: "Degrees & Certifications" },
-              { value: "4", label: "Countries Studied" },
-              { value: "5+", label: "Years in Advocacy" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="font-heading text-3xl md:text-4xl font-bold text-gold mb-2">{stat.value}</p>
-                <p className="font-body text-sm text-forest/60 uppercase tracking-wider">{stat.label}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-forest/10">
+            <StatItem value={100} label="Followers" suffix="K+" icon={Users} bgColor="bg-gold/20" iconColor="bg-gold text-white" />
+            <StatItem value={6} label="Degrees & Certs" icon={GraduationCap} bgColor="bg-forest/10" iconColor="bg-forest text-cream" />
+            <StatItem value={4} label="Countries Studied In" icon={Globe} bgColor="bg-blue-100" iconColor="bg-blue-500 text-white" />
+            <StatItem value={5} label="Years of Expertise" icon={Award} bgColor="bg-amber-100" iconColor="bg-amber-500 text-white" />
           </div>
         </div>
       </div>
