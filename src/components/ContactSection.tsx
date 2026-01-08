@@ -86,6 +86,22 @@ export const ContactSection = () => {
     }
 
     try {
+      // Check if environment variables are defined
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("Missing EmailJS environment variables");
+        toast({
+          title: "Configuration Error",
+          description: "Email service is not configured. Please contact the site administrator.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
       // Prepare sanitized template parameters
       const templateParams = {
         from_name: sanitizeInput(formData.name),
