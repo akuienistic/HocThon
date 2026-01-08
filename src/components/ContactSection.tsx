@@ -178,10 +178,10 @@ export const ContactSection = () => {
                 <div>
                   <p className="font-body text-sm text-forest/60 uppercase tracking-wider mb-1">Send an Email</p>
                   <a
-                    href="mailto:abrahamlaat717@gmail.com"
+                    href="mailto:laatabraham717@gmail.com"
                     className="font-heading text-lg text-forest hover:text-gold transition-colors"
                   >
-                    abrahamlaat717@gmail.com
+                    laatabraham717@gmail.com
                   </a>
                 </div>
               </div>
