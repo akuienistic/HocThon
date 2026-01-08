@@ -108,27 +108,23 @@ export const HeroSection = () => {
             Sudan".
           </p>
 
-          {/* Facebook Video */}
-          <div className="mx-auto max-w-md mb-10 bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-lg overflow-hidden shadow-lg flex justify-center">
-            <iframe
-              src="https://www.facebook.com/plugins/video.php?height=677&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1408736634095648%2F&show_text=false&width=400&t=0"
-              width="400"
-              height="677"
-              style={{
-                border: "none",
-                overflow: "hidden",
-                borderRadius: "2rem",
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                padding: "10px",
-              }}
-              scrolling="no"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe>
+          {/* Video */}
+          <div className="mx-auto max-w-4xl mb-10 rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative w-full pb-[56.25%] bg-black">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/awOzEdRq_9M?modestbranding=1&rel=0&iv_load_policy=3&controls=1&enablejsapi=1"
+                title="Featured Presentation"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
